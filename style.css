@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos&family=Orbitron&family=Poppins&display=swap');
+
+body, #ingrese-texto, ::placeholder, #encriptar, #desencriptar, #copiar, #mostrar-texto{
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Genos', sans-serif; */
+    font-family: 'Orbitron', sans-serif;
+}
+
+body{
+    background-color: lightgrey;
+    color: #0A3871;
+    height: 100vh;
+}
+main{
+    padding: 3% 4%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*aqui empieza la seccion 1*/
+.section-uno{
+    /* background-color: bisque; */
+    width: 10%;
+    text-align: center;
+}
+.section-uno img{
+/*ahora la imagen no cambia su tamaño a pesar del zoom*/    
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+#pegar{
+    border: 1px solid #0A3871;
+    width: 80%;
+    height: 2.75rem;
+    margin: 1rem 0 1% 0;
+    border-radius: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    background-color: #0A3871;
+    color: white;
+}
+
+/*aqui empieza la seccion 2*/
+.section-dos{
+    /* background-color: burlywood; */
+    padding-top: 5%;
+    width: 55%;
+    height: auto;
+}
+#ingrese-texto{
+    background-color: transparent;
+    border: 0;
+    outline: none; /*con esta propiedad puedes eliminar el borde que aparece cuando voy a escribir. usar en conjunto con boder: 0; o border: none!! */
+    font-size: 1.85rem;
+    width: 100%;
+    height: 75%;
+}
+::placeholder {
+    color: #0A3871;
+    font-size: 1.85rem;
+}
+.section-dos div{
+    height: 25%;
+}
+.section-dos div img{
+    float: left;
+    margin: 0 0.2em 0 0;
+}
+.section-dos div p{
+    display: inline-block;
+    font-size: 0.875rem;
+    color: black;
+}
+.botones{
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: aqua; */
+}
+#encriptar, #desencriptar, #copiar{
+    border: 1px solid #0A3871;
+    width: 13.7rem;
+    height: 3.75rem;
+    margin: 0 1%;
+    border-radius: 1rem;
+    font-size: 1.60rem;
+    font-style: italic;
+}
+#encriptar:hover, #desencriptar:hover, #copiar:hover, #pegar:hover{
+    /* filter: brightness(1.4); */
+    filter:contrast(1.4);
+    cursor: pointer;
+}
+
+#encriptar{
+    background-color: #0A3871;
+    color: white;
+}
+#desencriptar{
+    background-color: rgb(167, 167, 167);
+    color: #0A3871;
+}
+
+
+/*aqui empieza la seccion 3*/
+.section-tres{
+    /* background-color: coral; */
+    width: 35%;
+}
+.tres-vacio{
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10%/6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.tres-vacio img{
+    width: 70%;
+    margin:0 0 0 0;
+}
+.vacio-ningun{
+    margin: 5% 0;
+    font-weight: bold;
+    padding: 0 1em;
+    font-size: 1.6rem;
+}
+.vacio-ingrese{
+    font-size: 1.25rem;
+    padding: 0 1.5em;
+}
+
+.tres-contenido{
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10%/6%;
+    text-align: center;
+    /* display: none; */
+}
+#mostrar-texto{
+    width: 90%;
+    height: 75%;
+    margin: 5% 5% 2rem 5%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+#copiar{
+    background-color: rgb(167, 167, 167);
+    color: #0A3871;
+}
+/*Al copiar*/
+#mostrar-texto::selection{
+    background-color: transparent;
+}
+#mensaje{
+    color: rgb(167, 167, 167);
+}
+
+
+/*RESPONSIVIDAD*/
+/*celular*/
+@media screen and (max-width: 425px){
+    body{
+        width: 100vw;
+    }
+    main{
+        display: block;
+        padding: 6px;
+        width: 100%;
+        box-sizing: border-box;
+        width: 100%;
+
+    }
+
+    /*SECCION 1*/
+    .section-uno{
+        /* background-color: bisque; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 0.8rem;
+    }
+    .section-uno img{
+        /* background-color: aquamarine; */
+        width: 100px;
+        height: auto;
+        margin: 0;
+    }
+    #pegar{
+        width: 6rem;
+        height: 2.2rem;
+        margin:0 1rem;
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+
+    /*SECCION 2*/
+    .section-dos{
+        /* background-color: burlywood; */
+        padding-top: 10px;
+        width: 100%;
+        height: auto;
+    }
+    #ingrese-texto{
+        font-size: 1.4rem;
+        height: 50vh;
+    }
+    ::placeholder {
+        font-size: 1.4rem;
+    }
+    .section-dos div{
+        height: auto;
+        margin: 0;
+    }
+    .section-dos div p{
+        font-size: 0.7rem;
+    }
+    .section-dos .botones{
+        width: 100%;
+        height: 20%;
+        display: block;
+        text-align: center;
+        /* background-color: aqua; */
+    }
+    #encriptar, #desencriptar, #copiar{
+        height: 3rem;
+        width: 70%;
+        margin: 10px 0 0 0;
+        padding: 0 15px;
+        font-size: 1.4rem;
+    }
+
+    /*SECCION 3*/
+    .section-tres{
+        /* background-color: coral; */
+        width: 100%;
+        height: auto;
+        margin: 10px 0 0 0;
+        padding: 0 0 6px 0;
+        box-sizing: border-box;
+    }
+    .tres-vacio{
+        width: 100%;
+        height: 70vh;
+        margin: 4px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+    }
+    .tres-vacio img{
+        width: 50%;
+        margin:0;
+    }
+    .vacio-ningun{
+        margin: 6px 0;
+        padding: 0 1em;
+        font-size: 1.2rem;
+    }
+    .vacio-ingrese{
+        font-size: 1rem;
+        padding: 0 2rem;
+        margin: 6px;
+    }
+    
+    .tres-contenido{
+        width: 100%;
+        height: 70vh;
+        border-radius: 1rem;
+        text-align: center;
+    }
+    #mostrar-texto{
+        /* background-color: aquamarine; */
+        width: 100%;
+        height: 60vh;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        margin: 0;
+        font-size: 1.2rem;
+    } 
+}
+
+/*tablet*/
+@media screen and (min-width: 426px) and (max-width: 870px){
+    body{
+        width: 100vw;
+    }
+    main{
+        display: block;
+        padding: 0.8rem;
+        width: 100%;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /*SECCION 1*/
+    .section-uno{
+        /* background-color: bisque; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 0.8rem;
+    }
+    .section-uno img{
+        /* background-color: aquamarine; */
+        width: 100px;
+        height: auto;
+        margin: 0;
+    }
+    #pegar{
+        width: 6rem;
+        height: 2.4rem;
+        margin:0 1rem;
+        font-size: 1.1rem;
+        padding: 0 12px;
+    }
+
+
+    /*SECCION 2*/
+    .section-dos{
+        /* background-color: burlywood; */
+        padding-top: 10px;
+        width: 100%;
+        height: auto;
+    }
+    #ingrese-texto{
+        font-size: 1.6rem;
+        height: 50vh;
+    }
+    ::placeholder {
+        font-size: 1.6rem;
+    }
+    .section-dos div{
+        height: auto;
+        margin: 0;
+    }
+    .section-dos div p{
+        font-size: 0.9rem;
+    }
+    .section-dos .botones{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        text-align: center;
+        /* background-color: aqua; */
+    }
+    #encriptar, #desencriptar, #copiar{
+        height: 3.4rem;
+        width: 12rem;
+        margin: 14px 0 0 0;
+        padding: 0 6px;
+        font-size: 1.5rem;
+    }
+
+    /*SECCION 3*/
+    .section-tres{
+        /* background-color: coral; */
+        width: 100%;
+        height: auto;
+        margin: 14px 0 0 0;
+        padding: 0 0 14px 0;
+        box-sizing: border-box;
+    }
+    .tres-vacio{
+        width: 100%;
+        height: 74vh;
+        margin: 4px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+    }
+    .tres-vacio img{
+        width: 50%;
+        margin:0;
+    }
+    .vacio-ningun{
+        margin: 6px 0;
+        padding: 0 1em;
+        font-size: 1.4rem;
+    }
+    .vacio-ingrese{
+        font-size: 1.2rem;
+        padding: 0 2rem;
+        margin: 6px;
+    }
+    
+    .tres-contenido{
+        width: 100%;
+        height: 74vh;
+        border-radius: 1rem;
+        text-align: center;
+        padding: 0 0 14px 0;
+        box-sizing: border-box;
+    }
+    #mostrar-texto{
+        /* background-color: aquamarine; */
+        width: 100%;
+        height: 60vh;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+    
+}
+
